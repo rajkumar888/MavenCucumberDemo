@@ -1,2 +1,5 @@
-D:\EveningWS\MavenCucumberDemo\src\test\java\com\demo\StepsDef.java
+D:\EveningWS\MavenCucumberDemo\src\test\java\steps\StepsDef.java
+D:\EveningWS\MavenCucumberDemo\src\test\java\runner\TestRunnerPageModelDemo.java
+D:\EveningWS\MavenCucumberDemo\src\test\java\steps\SingInAndSearchSteps.java
+D:\EveningWS\MavenCucumberDemo\src\test\java\pagemodelTests\HomePageDemo.java
 D:\EveningWS\MavenCucumberDemo\src\test\java\runner\TestRunner.java

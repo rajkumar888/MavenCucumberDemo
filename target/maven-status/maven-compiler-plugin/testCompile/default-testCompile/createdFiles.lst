@@ -1,2 +1,5 @@
-com\demo\StepsDef.class
+pagemodelTests\HomePageDemo.class
+steps\SingInAndSearchSteps.class
+steps\StepsDef.class
+runner\TestRunnerPageModelDemo.class
 runner\TestRunner.class

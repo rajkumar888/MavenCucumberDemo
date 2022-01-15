@@ -5,12 +5,12 @@ import java.util.List;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class StepsDef {
-	
 	
 	@Before()
 	public void init(){
@@ -18,11 +18,10 @@ public class StepsDef {
 	}
 	
 	@After()
-	public void teaDown(){
-		System.out.println(" Cucumber After hooks example");
+	public void teaDown(Scenario scenario){
+		
+		System.out.println(" Cucumber After hooks example "+scenario.getName()+" is "+scenario.getStatus());
 	}
-	
-	
 	
 	
 	
@@ -71,7 +70,8 @@ public class StepsDef {
 	public void user_has_closed_the_application() {
 		System.out.println("user has closed the application called for execution");
 	}
-
+	
+	
 	
 	@Given("I am on a new user registration page")
 	public void i_am_on_a_new_user_registration_page() {
@@ -82,10 +82,10 @@ public class StepsDef {
 	@When("I enter valid data on the page")
 	public void i_enter_valid_data_on_the_page(DataTable dataTable) {
 		
-		
 		 //Initialize data table 
-	      List<List<String>> data = dataTable.asLists();
-	      
+	       List<List<String>> data = dataTable.asLists();
+	       
+//	       List<String> testdata = dataTable.asList(String.class);
 	      
 	      System.out.println(data.get(1).get(0));
 	      System.out.println(data.get(1).get(1));
@@ -93,13 +93,29 @@ public class StepsDef {
 	      System.out.println(data.get(2).get(1));
 	      System.out.println(data.get(3).get(0));
 	      System.out.println(data.get(3).get(1));
-	   
+	      System.out.println(data.get(4).get(0));
+	      System.out.println(data.get(4).get(1));
+	      System.out.println(data.get(5).get(0));
+	      System.out.println(data.get(5).get(1));
+	      System.out.println(data.get(6).get(0));
+	      System.out.println(data.get(6).get(1));
+	      System.out.println(data.get(7).get(0));
+	      System.out.println(data.get(7).get(1));
+	      System.out.println(data.get(8).get(0));
+	      System.out.println(data.get(8).get(1));
 	}
 	
 	@Then("the user registration should be successful.")
 	public void the_user_registration_should_be_successful() {
 		System.out.println("the user registration should be successful. called for execution"); 
 	}
+	
+	@Then("the given message should be displayed")
+	public void the_given_message_should_be_displayed(String docstringdemotext) {
+		System.out.println("Docstring demo "+docstringdemotext); 
+	}
+	
+	
 	
 	
 }
